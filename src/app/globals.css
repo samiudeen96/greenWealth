@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+:root {
+  /* --background: #f8f5f0; */
+  --background: #FFFFFF;
+  --foreground: #171717;
+  /* --font-heading: 'Playfair Display', serif; */
+  /* --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; */
+  --font-body: "Geist","Geist Placeholder",sans-serif;
+}
+
+@theme inline {
+  /* --color-background: var(--background); */
+  /* --color-foreground: var(--foreground); */
+  /* --font-heading: var(--font-heading);
+  --font-mono: var(--font-body); */
+
+  /* --font-display: "Poppins", sans-serif; */
+  /* --breakpoint-3xl: 1920px; */
+  --color-primary: #1F4D2E; 
+  --color-secondary: #3A7D44;
+  --color-section: #f0f5f4;
+  /* --color-tertiary: #f7843d; */
+  --color-background: #F4ECE3;
+  /* --color-surface: #ffffff; */
+  /* --color-text: #364153; */
+  --color-muted: #e5e5e5;
+
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* font-family: Arial, Helvetica, sans-serif;*/
+  font-family: var(--font-body); 
+}
+
+h1 {
+  /* @apply sm:text-7xl text-4xl; */
+  /* font-weight: 600; */
+  /* color: var(--color-primary); */
+}
+
+h1,h2,h3,h4,h5,h6{
+  /* font-family: var(--font-heading); */
+  
+}
+
+/* section{
+  @apply lg:px-12 sm:px-6 px-4 ;
+} */
+ 
+.section {
+  @apply px-4 sm:px-6 lg:px-12 py-4;
+}
+
+.animated-button {
+  @apply cursor-pointer  
+         px-2 py-2 rounded-md text-[14px]
+        font-medium relative overflow-hidden max-w-fit;
+}
+
+.button-inner {
+  @apply relative overflow-hidden;
+}
+
+.button-text,
+.button-text-hover {
+  @apply transition-all;
+  transition-duration: 1125ms;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  margin: 0;
+}
+
+.button-text {
+  @apply relative;
+}
+
+.button-text-hover {
+  @apply absolute left-0;
+  top: 1.75rem; /* approximate top-7 in Tailwind */
+  color: var(--color-secondary);
+}
+
+.animated-button:hover .button-text {
+  transform: translateY(-1.75rem); /* same as -translate-y-7 */
+}
+
+.animated-button:hover .button-text-hover {
+  top: 0;
+}
+
+.button2 {
+  @apply relative inline-block text-[#090909] font-medium px-4 py-2 
+      rounded-md bg-[#D4DCCF] 
+      transition-all duration-200 ease-in overflow-hidden cursor-pointer z-[1];
+}
+
+.button2:active {
+  color: #666;
+  /* box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff; */
+}
+
+.button2::before,
+.button2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2::before {
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.button2::after {
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #3a3d38;
+}
+
+.button2:hover {
+  @apply text-white border-[#3A3D38];
+}
+
+.button2:hover::before {
+  top: -35%;
+  background-color: #3a3d38;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover::after {
+  top: -45%;
+  background-color: #3a3d38;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#nav-icon4.open span:nth-child(1) {
+  @apply rotate-45 top-[-3px] left-[8px];
+}
+
+#nav-icon4.open span:nth-child(2) {
+  @apply w-0 opacity-0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  @apply -rotate-45 top-[39px] left-[8px];
+}
+
+/* h1 {
+  @apply text-[38px] sm:text-[94px] leading-[48px] sm:leading-[110px];
+  font-weight: 500;
+} */
+
+/*  */
+
+h1 {
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: clamp(40px, 6vw, 80px);
+}
+
+
+
+
+h2 {
+  @apply text-[36px] sm:text-[80px] leading-[42px] sm:leading-[96px];
+  font-weight: 500;
+}
+
+h3 {
+  /* @apply text-[32px] sm:text-[64px] leading-[38px] sm:leading-[80px]; */
+  @apply text-[32px] sm:text-[64px];
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+h4 {
+  @apply text-[28px] sm:text-[50px] leading-[34px] sm:leading-[60px];
+  font-weight: 500;
+}
+
+h5 {
+  @apply text-[24px] sm:text-[36px] leading-[30px] sm:leading-[44px];
+  font-weight: 500;
+}
+
+h6 {
+  @apply text-[20px] sm:text-[28px] leading-[26px] sm:leading-[36px];
+  font-weight: 500;
+}
+
+.container {
+  @apply 
+    w-full              /* mobile */
+    sm:w-11/12          /* tablet */
+    md:w-10/12          /* desktop */
+    lg:w-10/12           /* large device */
+    mx-auto 
+    /* bg-gray-200; */
+}
+
+
+.pill {
+  @apply bg-[#D4DCCF] text-xs w-fit py-1 px-3 rounded-md;
+}
+
+.image1 {
+  will-change: transform;
+}
+
+
+.frosted-bg {
+  
+position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(30px);
+    z-index: 99999;
+    opacity: 1;
+    will-change: transform;
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
+
+
+
+/* 1. Responsive layout, text, images and gsap movements */
+/* 2.  */
