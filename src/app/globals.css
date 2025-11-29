@@ -19,9 +19,10 @@
   /* --breakpoint-3xl: 1920px; */
   --color-primary: #1F4D2E; 
   --color-secondary: #3A7D44;
-  --color-section: #f0f5f4;
+  /* --color-section: #f0f5f4; */
+  --color-section: #f9f5f1;
   /* --color-tertiary: #f7843d; */
-  --color-background: #F4ECE3;
+  /* --color-background: #F4ECE3; */
   /* --color-surface: #ffffff; */
   /* --color-text: #364153; */
   --color-muted: #e5e5e5;
@@ -216,7 +217,7 @@ h6 {
 
 
 .pill {
-  @apply bg-[#D4DCCF] text-xs w-fit py-1 px-3 rounded-md;
+  @apply bg-section text-lg w-fit py-1 px-3 rounded-md;
 }
 
 .image1 {
@@ -249,5 +250,8 @@ position: fixed;
 
 
 
-/* 1. Responsive layout, text, images and gsap movements */
-/* 2.  */
+/* 
+    1. Responsive layout, text, images and gsap movements
+    2. menu for mobile
+    3. 
+*/

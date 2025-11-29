@@ -1,10 +1,19 @@
+"use client"
 import { menu } from "@/utils/constant";
 import Image from "next/image";
 import React from "react";
 import Cart from "./Cart";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+const pathname = usePathname();
+
+const linkClasses = (path) =>
+    pathname === path
+      ? "text-secondary" // active
+      : ""; // normal
+
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <section
@@ -32,7 +41,7 @@ const Header = () => {
             src="/brand.webp"
             alt="Hero image"
             width={90}
-            height={50}
+            height={40}
             priority
           />
         </Link>
@@ -44,9 +53,9 @@ const Header = () => {
             <li key={index}>
               
               <Link className="animated-button" href={item.path}>
-              <div className="button-inner">
-                <p className="button-text">{item.label}</p>
-                <p className="button-text-hover">{item.label}</p>
+              <div className={`button-inner ${linkClasses(item.path)}`}>
+                  <p className={`button-text`}>{item.label}</p>
+                  <p className="button-text-hover">{item.label}</p>
                 </div>
               </Link>
 

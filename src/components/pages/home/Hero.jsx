@@ -150,7 +150,7 @@ useGSAP(
           end: "bottom top",
           pin: true,
           pinType: "transform",
-          pinSpacing: scrollRefs.current.length === 4 ? true : false,
+          pinSpacing: scrollRefs.current.length === 5 ? true : false,
         });
       });
 
@@ -251,7 +251,7 @@ useGSAP(
     <section className="relative" ref={containerRef}>
       <div className="h-full w-full">
         <div
-          className=" section h-[calc(100vh-64px)] w-full flex flex-col sm:flex-row items-center justify-between heroSec1 "
+          className=" section h-[calc(100vh-64px)] w-full flex flex-col sm:flex-row items-center justify-between heroSec1"
           
         >
           {/* <div className="text1 opacity-0 w-full"> */}
@@ -392,7 +392,7 @@ useGSAP(
 
       <div className="absolute top-0 left-0 h-[calc(100vh-64px)] w-full flex flex-col justify-end items-center " ref={productWrapperRef}>
         <div className="flex flex-col items-center justify-center product-pin-section img">
-              <div className="relative lg:w-[500px] lg:h-[500px] md:w-[250px] md:h-[280px] w-[280px] h-[250px] productWrapperRef" >
+              <div className="relative lg:w-[500px] lg:h-[500px] md:w-[250px] md:h-[280px] w-[280px] h-[250px] productWrapperRef">
                 <Image
                   
                   className="object-contain"

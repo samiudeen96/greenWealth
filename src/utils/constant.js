@@ -6,22 +6,26 @@ export const menu = [
     label: "Home",
     path: "/"
   },
+      {
+    label: "Verification",
+    path: "/verification"
+  },
     {
     label: "Shop",
     path: "/shop"
   },
-      {
-    label: "Events",
-    path: "/event"
-  },
-      {
-    label: "News",
-    path: "/shop"
-  },
-      {
-    label: "Ingredients",
-    path: "/about"
-  },
+  // {
+  //   label: "Events",
+  //   path: "/event"
+  // },
+  //     {
+  //   label: "News",
+  //   path: "/shop"
+  // },
+  //     {
+  //   label: "Ingredients",
+  //   path: "/about"
+  // },
     {
     label: "About Us",
     path: "/about"
@@ -36,55 +40,58 @@ export const menu = [
 export const scrollContent = [
   {
     
-    title: "Content 1",
+    title: "Herbal Formula for Hair Regrowth",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Neo Hair Lotion uses natural extracts like Ginseng and Cantaloupe to stimulate hair follicles and support healthy hair growth.",
   },
     {
-    title: "Content 2",
+    title: "Stops Hair Fall and Strengthens Roots",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Effectively reduces hair loss by nourishing the scalp and reinforcing hair roots for thicker, fuller hair.",
   },
     {
-    title: "Content 3",
+    title: "Non-Greasy, Fast-Absorbing Lotion",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Lightweight formula absorbs quickly without leaving residue, ideal for daily use by both men and women.",
   },
       {
-    title: "Content 4",
+    title: "Free from Harsh Chemicals",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "100% free from paraben, silicones, and sulfates; safe for all hair types and sensitive scalps.",
   },
       {
-    title: "Content 5",
+    title: "Improves Scalp Health Naturally",
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Revitalizes the scalp, improves blood circulation, and creates the ideal environment for hair regrowth.",
   },
-  
-];
+        {
+    title: "Clinically Proven and Widely Trusted",
+    content:
+      "A popular Thai hair treatment used worldwide for visible results in hair restoration and regrowth.",
+  },
 
-
+]
 
 export const slide = [
   {
-    label: "Apply",
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    label: "Identify The Secret Code",
+    content: "When you purchase the Neo Hair Lotion make sure the secret code sticker is on the box.",
     img: "/stacked/step1.png"
   },
   {
-    label: "Distribute",
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    img: "/stacked/stp-2.webp"
+    label: "Scratch Off The Coating",
+    content: "Gently scratch the coating with a coin or fingernail to see the hidden code underneath.",
+    img: "/stacked/step2.png"
   },
   {
-    label: "Press",
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    img: "/stacked/stp-3.webp"
+    label: "Visit The Official Website",
+    content: "Go to www.greenwealth.com and enter the code to verify authenticity.",
+    img: "/stacked/step3.png"
   },
     {
-    label: "Press",
-    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    img: "/stacked/stp-3.webp"
+    label: "Authentication Popup",
+    content: "Once you submit the code, you will receive an authentication pop-up if your product is genuine or not.",
+    img: "/stacked/step4.png"
   },
   
 ];

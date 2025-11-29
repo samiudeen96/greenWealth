@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useDeviceType } from "@/hooks/useDeviceType";
+import ButtonBg from "@/components/common/ButtonBg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,10 +87,17 @@ const StackedCards = () => {
         ref={stackedSectionRef}
         className="section h-[calc(100vh-64px)] grid grid-cols-1 md:grid-cols-2 md:items-center gap-5 md:gap-10 "
       >
-        <h4 className="">
+        <div>
+          <h4 className="">
           {/* Your new skincare <br /> routine is beautifully <br /> simple. */}
           Follow 4 simple steps <br /> to verify the original <br /> <span className="text-secondary">Neo Hair Lotion</span>
         </h4>
+
+        <div className="mt-10">
+          <ButtonBg>Verify Product</ButtonBg>
+        </div>
+
+        </div>
 
         <div className="relative md:w-[440px] md:h-[580px] h-[400px]">
           {slide.map((item, i) => {
@@ -100,13 +108,36 @@ const StackedCards = () => {
               <div
                 key={i}
                 ref={(el) => (cardsRef.current[i] = el)}
-                className="w-full h-full rounded-2xl absolute top-0 left-0 overflow-hidden"
+                className="w-full h-full rounded-2xl absolute top-0 left-0 overflow-hidden  shadow-2xl bg-section"
                 style={{
                   zIndex: slide.length - i,
                   transform: `translateX(${offset}px) scale(${scale})`,
                 }}
               >
-                <div className="relative w-full h-full">
+                <div className="relative h-[65%]  flex items-center justify-center p-4">
+                  <div className="relative w-[300px] h-[100%]">
+                    <Image
+                    className="object-contain"
+                    src={item.img}
+                    // width={300}
+                    // height={300}
+                    fill
+                    alt={item.label}
+                  />
+                  </div>
+                </div>
+
+                <div className="h-[35%] bg-primary p-4">
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="pill">Step 0{i + 1}</div>
+                      <h6 className="font-semibold text-white mt-6">{item.label}</h6>
+                      <p className="text-white mt-2 text-center">{item.content}</p>
+                    </div>
+                  </div>
+
+            
+
+                {/* <div className="relative w-full h-full">
                   <Image
                     className="object-cover"
                     src={item.img}
@@ -120,7 +151,7 @@ const StackedCards = () => {
                       <p className="text-white mt-3">{item.content}</p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             );
           })}

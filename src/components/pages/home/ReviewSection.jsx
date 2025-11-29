@@ -117,7 +117,7 @@ useGSAP(
           {review.map((item, index) => (
             <div
               key={index}
-              className={`p-5 md:w-96 min-h-96 flex flex-col justify-between bg-white rounded-lg ${
+              className={`p-5 md:w-96 min-h-96 flex flex-col justify-between bg-white shadow-2xl rounded-lg ${
                 (index + 1) % 3 === 0 ? "md:col-span-2 mx-auto" : ""
               }`}
             >
