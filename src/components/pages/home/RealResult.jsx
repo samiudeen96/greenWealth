@@ -272,7 +272,7 @@ useGSAP(
 
   return (
     <div ref={imageSecRef} className="container">
-      {/* TOP SECTION */}
+      {/* {/ * TOP SECTION * /}
       <div className=" section pt-5 md:pt-20">
         <h3>
           Simple ingredients, <strong>powerful results.</strong>
@@ -308,7 +308,7 @@ useGSAP(
           </div>
         </div>
 
-        {/* BOTTOM GRID */}
+        {/ * BOTTOM GRID * /}
         <div className="mt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-25">
             {info.map((item, i) => (
@@ -323,7 +323,7 @@ useGSAP(
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* MID SECTIONS */}
       <div className="section grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 my-56">

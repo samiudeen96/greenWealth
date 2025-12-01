@@ -40,35 +40,41 @@ export const menu = [
 export const scrollContent = [
   {
     
-    title: "Herbal Formula for Hair Regrowth",
+    title: "Cucumis Melo",
+    info: "(Cantaloupe Extract)",
+    img: "/ingredients/cucumis.jpg",
     content:
-      "Neo Hair Lotion uses natural extracts like Ginseng and Cantaloupe to stimulate hair follicles and support healthy hair growth.",
+      "Helps strengthen hair roots, boost hydration, and promote healthier, shinier hair.",
   },
     {
-    title: "Stops Hair Fall and Strengthens Roots",
+    title: "Ginseng Radix Alba",
+    img: "/ingredients/ginseng.webp",
     content:
-      "Effectively reduces hair loss by nourishing the scalp and reinforcing hair roots for thicker, fuller hair.",
+      "Stimulate hair growth, strengthen hair roots, reduce hair fall, and improve scalp health.",
   },
     {
-    title: "Non-Greasy, Fast-Absorbing Lotion",
+    title: "Equisetum Arvense",
+    info:"(Horsetail)",
+    img: "/ingredients/equisetum.jpg",
     content:
       "Lightweight formula absorbs quickly without leaving residue, ideal for daily use by both men and women.",
   },
       {
-    title: "Free from Harsh Chemicals",
+    title: "Saw Palmetto",
+    img: "/ingredients/palmetto.jpg",
     content:
       "100% free from paraben, silicones, and sulfates; safe for all hair types and sensitive scalps.",
   },
-      {
-    title: "Improves Scalp Health Naturally",
-    content:
-      "Revitalizes the scalp, improves blood circulation, and creates the ideal environment for hair regrowth.",
-  },
-        {
-    title: "Clinically Proven and Widely Trusted",
-    content:
-      "A popular Thai hair treatment used worldwide for visible results in hair restoration and regrowth.",
-  },
+  //     {
+  //   title: "Improves Scalp Health Naturally",
+  //   content:
+  //     "Revitalizes the scalp, improves blood circulation, and creates the ideal environment for hair regrowth.",
+  // },
+  //       {
+  //   title: "Clinically Proven and Widely Trusted",
+  //   content:
+  //     "A popular Thai hair treatment used worldwide for visible results in hair restoration and regrowth.",
+  // },
 
 ]
 
