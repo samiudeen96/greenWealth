@@ -1,51 +1,65 @@
 "use client";
 import Image from "next/image";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 const Cart = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [count, setCount] = useState(1);
   const price = 85;
-  const cartRef = useRef(null);
+
   const backdropRef = useRef(null);
   const panelRef = useRef(null);
 
   const increase = () => setCount((prev) => prev + 1);
   const decrease = () => setCount((prev) => (prev > 1 ? prev - 1 : 1));
 
-  // Animate open/close
-  useGSAP(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      gsap.to(backdropRef.current, { opacity: 1, duration: 0.3, display: "flex" });
-      gsap.fromTo(
-        panelRef.current,
-        { x: "100%" },
-        { x: "0%", duration: 0.55, ease: "power2.inOut" }
-      );
-    } else {
-      document.body.style.overflow = "auto";
-      gsap.to(panelRef.current, {
-        x: "100%",
-        duration: 0.45,
-        ease: "power2.inOut",
-      });
-      gsap.to(backdropRef.current, {
-        opacity: 0,
-        duration: 0.3,
-        display: "none",
-        delay: 0.45,
-      });
-    }
-  }, [isOpen]);
+  useGSAP(
+    () => {
+      if (!backdropRef.current || !panelRef.current) return;
+
+      if (isOpen) {
+        document.body.style.overflow = "hidden";
+
+        gsap.to(backdropRef.current, {
+          opacity: 1,
+          display: "flex",
+          duration: 0.3,
+        });
+
+        gsap.fromTo(
+          panelRef.current,
+          { x: "100%" },
+          { x: "0%", duration: 0.55, ease: "power2.inOut" }
+        );
+      } else {
+        document.body.style.overflow = "auto";
+
+        gsap.to(panelRef.current, {
+          x: "100%",
+          duration: 0.45,
+          ease: "power2.inOut",
+        });
+
+        gsap.to(backdropRef.current, {
+          opacity: 0,
+          display: "none",
+          duration: 0.3,
+          delay: 0.45,
+        });
+      }
+    },
+    { dependencies: [isOpen] }
+  );
 
   return (
     <>
       {/* Cart Button */}
       <div
-        className="flex items-center gap-1 cursor-pointer" ref={cartRef}
+        className="flex items-center gap-1 cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
         <p>Bag</p>
@@ -57,7 +71,7 @@ const Cart = () => {
       {/* Backdrop + Cart */}
       <div
         ref={backdropRef}
-        className="fixed inset-0 z-10 bg-[rgba(51,51,51,0.5)] backdrop-blur-[10px] flex justify-end opacity-0 hidden h-screen md:p-6 p-4 "
+        className="fixed inset-0 z-10 bg-[rgba(51,51,51,0.5)] backdrop-blur-[10px] flex justify-end opacity-0 hidden h-screen md:p-6 p-4"
         onClick={() => setIsOpen(false)}
       >
         {/* Cart Panel */}
@@ -127,7 +141,9 @@ const Cart = () => {
                     </button>
                   </div>
 
-                  <div className="text-sm font-medium">${price * count}</div>
+                  <div className="text-sm font-medium">
+                    ${price * count}
+                  </div>
                 </div>
               </div>
             </div>
@@ -137,7 +153,9 @@ const Cart = () => {
           <div className="sm:p-6 p-4 h-[25%] border-t border-[#dedede]">
             <div className="grid grid-cols-2 justify-between w-full">
               <div>Shipping & Taxes</div>
-              <div className="text-end text-xs">Calculated at checkout</div>
+              <div className="text-end text-xs">
+                Calculated at checkout
+              </div>
               <div className="mt-2 font-semibold text-2xl">Subtotal</div>
               <div className="text-end mt-2 font-semibold text-2xl">
                 ${price * count}

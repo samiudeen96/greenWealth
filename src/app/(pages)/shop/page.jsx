@@ -12,7 +12,7 @@ const Shop = () => {
   
 
   return (
-    <div className="bg-background h-screen">
+    <div className="bg-background min-h-screen">
           <div className="section">
 
         <div className="container">

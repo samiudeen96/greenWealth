@@ -36,19 +36,21 @@ const ProductCards = ({ item }) => {
   return (
     <div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg p-6 relative">
         
-        <div className="h-[50%]">
+        <div className="min-h-[65%] w-[200px] relative">
           {imageUrl && (
           <Image
+          className="object-cover"
             src={imageUrl}
-            // fill
-            width={200}
-            height={250}
+            fill
+            // width={200}
+            // height={250}
             alt={item.title}
           />
         )}
         </div>
 
-      <p className="text-primary mt-4">{category}</p>
+      <div className="min-h-[35%] flex flex-col items-center justify-center">
+        <p className="text-primary mt-4">{category}</p>
 
       <p className="mt-2 font-semibold text-center">{item.title}</p>
 
@@ -58,6 +60,7 @@ const ProductCards = ({ item }) => {
           <p className="text-red-800">{formattedPrice}</p>
         </div>
       )} */}
+      </div>
     </div>
   );
 };
