@@ -357,7 +357,7 @@ const Hero = () => {
                     0{index + 1}
                   </div> */}
                   <div className="flex items-center gap-4">
-                    <div className="relative rounded-full min-h-[150px] min-w-[150px] overflow-hidden">
+                    <div className="relative rounded-full min-h-[100px] min-w-[100px] md:min-h-[150px] md:min-w-[150px] overflow-hidden">
                       <Image
                       className="object-cover"
                         src={item.img}

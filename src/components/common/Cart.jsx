@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Cart = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Cart = () => {
   const decrease = () => setCount((prev) => (prev > 1 ? prev - 1 : 1));
 
   // Animate open/close
-  useEffect(() => {
+  useGSAP(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
       gsap.to(backdropRef.current, { opacity: 1, duration: 0.3, display: "flex" });
@@ -56,17 +57,17 @@ const Cart = () => {
       {/* Backdrop + Cart */}
       <div
         ref={backdropRef}
-        className="fixed inset-0 z-10 bg-[rgba(51,51,51,0.5)] backdrop-blur-[10px] flex justify-end opacity-0 hidden h-screen p-6"
+        className="fixed inset-0 z-10 bg-[rgba(51,51,51,0.5)] backdrop-blur-[10px] flex justify-end opacity-0 hidden h-screen md:p-6 p-4 "
         onClick={() => setIsOpen(false)}
       >
         {/* Cart Panel */}
         <div
           ref={panelRef}
-          className="xl:w-3/12 w-full max-w-full h-full bg-white sm:rounded-xl shadow-lg overflow-y-auto"
+          className="xl:w-3/12 w-full max-w-full h-full bg-white sm:rounded-xl shadow-lg overflow-y-auto rounded-lg"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="sm:px-6 px-5 border-b border-[#dedede] flex justify-between items-center h-[10%]">
+          <div className="sm:px-6 px-4 border-b border-[#dedede] flex justify-between items-center h-[10%]">
             <div className="flex items-center gap-1">
               <h6>Bag</h6>
               <div className="min-w-5 h-5 bg-[#3a3d38] rounded-sm flex items-center justify-center text-xs font-semibold text-white">
@@ -85,9 +86,9 @@ const Cart = () => {
           </div>
 
           {/* Cart Content */}
-          <div className="sm:p-6 p-5 h-[65%] overflow-y-auto">
-            <div className="flex items-center gap-6">
-              <div className="w-[180px] h-[180px] relative border-2 border-[#dedede] rounded-2xl overflow-hidden">
+          <div className="sm:p-6 p-4 h-[65%] overflow-y-auto">
+            <div className="flex items-center gap-4">
+              <div className="min-w-[120px] min-h-[120px] relative border-2 border-[#dedede] rounded-lg overflow-hidden">
                 <Image
                   className="object-cover"
                   src="/products/product1.jpg"
@@ -133,7 +134,7 @@ const Cart = () => {
           </div>
 
           {/* Footer */}
-          <div className="sm:p-6 p-5 h-[25%] border-t border-[#dedede]">
+          <div className="sm:p-6 p-4 h-[25%] border-t border-[#dedede]">
             <div className="grid grid-cols-2 justify-between w-full">
               <div>Shipping & Taxes</div>
               <div className="text-end text-xs">Calculated at checkout</div>

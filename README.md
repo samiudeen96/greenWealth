@@ -36,3 +36,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # greenWealth
 # greenWealth
+
+
+<!-- NEXT_PUBLIC_MEDUSA_BACKEND_URL=http://3.108.63.117:9000/app
+NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=pk_9ca9e64bcca79d5f30bba6acd4fd7f247bbb2a8abe9874774d1b43c1f64e8a14
+NEXT_PUBLIC_MEDUSA_SALES_CHANNEL_ID=sc_01KB7KFCPXGHYNRDYP995QS5TK -->
