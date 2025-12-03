@@ -34,12 +34,12 @@ const ProductCards = ({ item }) => {
   //   : null;
 
   return (
-    <div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg p-6 relative">
+    <div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg  relative">
         
-        <div className="min-h-[65%] w-[200px] relative">
+        <div className="min-h-[65%] w-full relative bg-red-200 p-6">
           {imageUrl && (
           <Image
-          className="object-cover"
+          className="object-contain"
             src={imageUrl}
             fill
             // width={200}
@@ -49,7 +49,7 @@ const ProductCards = ({ item }) => {
         )}
         </div>
 
-      <div className="min-h-[35%] flex flex-col items-center justify-center">
+      <div className="min-h-[35%] flex flex-col items-center justify-center bg-yellow-100 w-full p-6">
         <p className="text-primary mt-4">{category}</p>
 
       <p className="mt-2 font-semibold text-center">{item.title}</p>
