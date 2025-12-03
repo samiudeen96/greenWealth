@@ -377,7 +377,7 @@ export default Hero;
 //   return (
 //     <section className="relative">
 //       {/* SECTION 1 */}
-//       <div className="relative h-[calc(100vh-64px)] w-full">
+//       <div className="relative h-[calc(100vh-56px)] w-full">
 //         <h1 ref={text1Ref} className="opacity-0 translate-y-[38vh]">
 //           Your healthiest <br /> skin revealed.
 //         </h1>

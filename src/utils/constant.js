@@ -187,3 +187,43 @@ export const review = [
       content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
   }
 ]
+
+
+export const products = [
+  {
+    title: "Green Wealth Neo Hair Lotion®",
+    image: "/stacked/step1.png",
+    price: "125 AED",
+    offerPrice: "100 AED",
+    category: "Treatment"
+
+  },
+  {
+    title: "Green Wealth Neo Hair Lotion®",
+    image: "/stacked/step1.png",
+    price: "125 AED",
+    offerPrice: "100 AED",
+    category: "Treatment"
+  },
+  {
+    title: "Green Wealth Neo Hair Lotion®",
+    image: "/stacked/step1.png",
+    price: "125 AED",
+    offerPrice: "100 AED",
+    category: "Treatment"
+  },
+  {
+    title: "Green Wealth Neo Hair Lotion®",
+    image: "/stacked/step1.png",
+    price: "125 AED",
+    offerPrice: "100 AED",
+    category: "Treatment"
+  },
+  {
+    title: "Green Wealth Neo Hair Lotion®",
+    image: "/stacked/step1.png",
+    price: "125 AED",
+    offerPrice: "100 AED",
+    category: "Treatment"
+  },
+]

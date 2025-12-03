@@ -60,21 +60,21 @@
 //   }
 // }
 
-import { NextResponse } from "next/server";
-import API from "@/services/axiosInstance";
+// import { NextResponse } from "next/server";
+// import API from "@/services/axiosInstance";
 
-export async function GET() {
-  try {
+// export async function GET() {
+//   try {
 
-    // Always filter for Floradyle
-    const params = { "xStudioBrand.equals": "Floradyle" };
+//     // Always filter for Floradyle
+//     const params = { "xStudioBrand.equals": "Floradyle" };
 
-    const res = await API.get("/products", { params });
-    return NextResponse.json(res.data);
-  } catch (err) {
-    return NextResponse.json(
-      { error: err.response?.data || err.message },
-      { status: err.response?.status || 500 }
-    );
-  }
-}
+//     const res = await API.get("/products", { params });
+//     return NextResponse.json(res.data);
+//   } catch (err) {
+//     return NextResponse.json(
+//       { error: err.response?.data || err.message },
+//       { status: err.response?.status || 500 }
+//     );
+//   }
+// }

@@ -10,14 +10,14 @@
 
 
 
-import axios from "axios";
+// import axios from "axios";
 
-const API = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
-});
+// const API = axios.create({
+//   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+// });
 
 
-export default API;
+// export default API;
 
 
 // import axios from "axios";

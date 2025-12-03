@@ -23,6 +23,7 @@
   --color-section: #f9f5f1;
   /* --color-tertiary: #f7843d; */
   /* --color-background: #F4ECE3; */
+  --color-background: #f9f5f1;
   /* --color-surface: #ffffff; */
   /* --color-text: #364153; */
   --color-muted: #e5e5e5;
@@ -174,8 +175,6 @@ h1 {
   font-size: clamp(32px, 5vw, 64px);
   line-height: clamp(40px, 6vw, 80px);
 }
-
-
 
 
 h2 {

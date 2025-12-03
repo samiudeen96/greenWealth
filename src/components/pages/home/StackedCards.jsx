@@ -85,7 +85,7 @@ const StackedCards = () => {
     <div className="container mt-20" ref={containerRef}>
       <div
         ref={stackedSectionRef}
-        className="section h-[calc(100vh-64px)] grid grid-cols-1 md:grid-cols-2 md:items-center gap-5 md:gap-10 "
+        className="section h-[calc(100vh-56px)] grid grid-cols-1 md:grid-cols-2 md:items-center gap-5 md:gap-10 "
       >
         <div>
           <h4 className="">

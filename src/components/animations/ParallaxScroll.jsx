@@ -62,7 +62,7 @@
 //   });
 
 //   return (
-//     <section className="h-[calc(100vh-64px)] bg-red-200">
+//     <section className="h-[calc(100vh-56px)] bg-red-200">
 //       <h1 className="text1 translate-y-[38dvh] opacity-0">
 //         Your healthiest <br /> skin revealed.
 //       </h1>
@@ -235,7 +235,7 @@ export default function ParallaxScroll() {
 //   return (
 //     <section className="relative">
 //       {/* ---------------- SECTION 1 ---------------- */}
-//       <div className="relative h-[calc(100vh-64px)] w-full">
+//       <div className="relative h-[calc(100vh-56px)] w-full">
 //         <h1 className="text1 opacity-0 translate-y-[38vh]">
 //           Your healthiest <br /> skin revealed.
 //         </h1>

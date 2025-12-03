@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
 
         <Header />
 
-        <div id="smooth-wrapper" className="pt-[64px]">
+        <div id="smooth-wrapper" className="pt-[56px]">
           <div id="smooth-content">
             <SmoothScrollProvider>
               <QueryProvider>

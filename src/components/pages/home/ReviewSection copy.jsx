@@ -81,7 +81,7 @@ const ReviewSection = () => {
     <div ref={containerRef} className='container'>
 
       {/* FIRST SECTION (PINNED) */}
-      <div className='h-[calc(100vh-64px)] flex items-center justify-center first-content relative'>
+      <div className='h-[calc(100vh-56px)] flex items-center justify-center first-content relative'>
         <div className='text-center leading-none z-0 doorText absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full'>
           <p className='md:text-[200px] text-[55px] font-semibold left-door'>What are</p>
           <p className='md:text-[200px] text-[55px] font-semibold right-door'>they saying</p>
@@ -112,7 +112,7 @@ const ReviewSection = () => {
       </div>
 
       {/* REVIEWS GRID */}
-      <div className='section min-h-[calc(100vh-64px)] flex items-center justify-center second-content relative z-10'>
+      <div className='section min-h-[calc(100vh-56px)] flex items-center justify-center second-content relative z-10'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 justify-between">
           {review.map((item, index) => (
             <div
@@ -138,7 +138,7 @@ const ReviewSection = () => {
       </div>
 
       {/* EMPTY THIRD SECTION TO RELEASE PIN */}
-      {/* <div className='min-h-[calc(100vh-64px)] flex items-center justify-center third-content opacity-0'>
+      {/* <div className='min-h-[calc(100vh-56px)] flex items-center justify-center third-content opacity-0'>
         
       </div> */}
       
