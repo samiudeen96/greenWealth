@@ -64,7 +64,7 @@ export default function VerifyPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-6">
+    <div className=" bg-white flex items-center justify-center p-6">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-white border border-zinc-200 rounded-2xl shadow-sm p-7 space-y-6"

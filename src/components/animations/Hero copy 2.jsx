@@ -134,7 +134,7 @@ const Hero = () => {
       {/* <div className="hidden handRef"></div> */}
       <div className=" z-0 relative heroSec1">
         <div
-          className=" section h-[calc(100vh-56px)] w-full flex items-center justify-between"
+          className=" section h-[calc(100vh-60px)] w-full flex items-center justify-between"
           ref={handRef}
         >
           <h1 className="text1 opacity-0">
@@ -142,7 +142,7 @@ const Hero = () => {
           </h1>
         </div>
 
-      <div className="absolute top-0 h-[calc(100vh-56px)] flex items-center justify-center pinBlurTextRef w-full">
+      <div className="absolute top-0 h-[calc(100vh-60px)] flex items-center justify-center pinBlurTextRef w-full">
         <h3 ref={blurTextRef} className="leading-[75px] text-center">
           {/* DESKTOP (md and up): Two lines */}
           <span className="hidden md:inline-block">
@@ -189,7 +189,7 @@ const Hero = () => {
       </div>
 
       {/* ---------------- PRODUCT IMAGE ---------------- */}
-      <div className="absolute top-0 left-0 z-0  h-[calc(100vh-56px)] w-full  productWrapperRef">
+      <div className="absolute top-0 left-0 z-0  h-[calc(100vh-60px)] w-full  productWrapperRef">
 
         <div
           className="relative lg:w-[500px] lg:h-[500px] md:w-[250px] md:h-[280px] w-[280px] h-[250px] "

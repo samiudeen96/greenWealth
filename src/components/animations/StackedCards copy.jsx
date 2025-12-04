@@ -81,7 +81,7 @@ const StackedCards = () => {
   return (
     <div
       ref={containerRef}
-      className="container h-[calc(100vh-56px)] grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-10 px-4 md:px-0 " id="stacked"
+      className="container h-[calc(100vh-60px)] grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-10 px-4 md:px-0 " id="stacked"
     >
       <h4 className="text-2xl md:text-4xl leading-[40px] md:leading-[60px]">
         Your new skincare <br /> routine is beautifully <br /> simple.

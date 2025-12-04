@@ -17,7 +17,7 @@ const linkClasses = (path) =>
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <section
-        className="h-12 lg:px-12 sm:px-6 px-4 flex 
+        className="h-[60px] lg:px-12 sm:px-6 px-4 flex 
         items-center justify-between
         bg-white/60 backdrop-blur-md border-b border-white/20"
       >

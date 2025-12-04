@@ -31,7 +31,7 @@ const StackedCards = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: stackedSectionRef.current,
-          start: "top top+=64px",
+          start: "top top+=60px",
           end: `+=${slide.length * 500}`,
           scrub: true,
           pin: true,
@@ -82,10 +82,10 @@ const StackedCards = () => {
   }, [mounted, device]);
 
   return (
-    <div className="container mt-20" ref={containerRef}>
+    <div className="section mt-20" ref={containerRef}>
       <div
         ref={stackedSectionRef}
-        className="section h-[calc(100vh-56px)] grid grid-cols-1 md:grid-cols-2 md:items-center gap-5 md:gap-10 "
+        className=" container h-[calc(100vh-60px)] grid grid-cols-1 md:grid-cols-2 md:items-center gap-5 md:gap-10 "
       >
         <div>
           <h4 className="">

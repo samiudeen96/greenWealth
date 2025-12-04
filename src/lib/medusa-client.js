@@ -1,8 +1,15 @@
-import Medusa from "@medusajs/medusa-js";
+// lib/medusa.js
+import Medusa from "@medusajs/js-sdk"
 
-export const medusaClient = new Medusa({
+if (!process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL) {
+  throw new Error("Missing NEXT_PUBLIC_MEDUSA_BACKEND_URL")
+}
+
+if (!process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY) {
+  throw new Error("Missing NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY")
+}
+
+export const medusa = new Medusa({
   baseUrl: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL,
-  apiKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
-  defaultSalesChannelId: process.env.NEXT_PUBLIC_MEDUSA_SALES_CHANNEL_ID,
-  maxRetries: 3,
-});
+  publishableKey: process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY,
+})

@@ -34,34 +34,44 @@ const ProductCards = ({ item }) => {
   //   : null;
 
   return (
-    <div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg  relative">
-        
-        <div className="min-h-[65%] w-full relative bg-red-200 p-6">
-          {imageUrl && (
+<div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg relative">
+  {/* IMAGE AREA */}
+  <div className="p-6 h-[65%] w-full">
+    <div className="h-full w-full relative">
+      {imageUrl && (
           <Image
-          className="object-contain"
+            className="object-contain"
             src={imageUrl}
-            fill
-            // width={200}
-            // height={250}
             alt={item.title}
+            fill
+            sizes="(max-width: 768px) 100vw,
+                  (max-width: 1024px) 50vw,
+                  (max-width: 1280px) 33vw,
+                  25vw"
           />
-        )}
-        </div>
 
-      <div className="min-h-[35%] flex flex-col items-center justify-center bg-yellow-100 w-full p-6">
-        <p className="text-primary mt-4">{category}</p>
-
-      <p className="mt-2 font-semibold text-center">{item.title}</p>
-
-      {/* Uncomment when you add real prices */}
-      {/* {formattedPrice && (
-        <div className="flex items-center justify-center gap-10 mt-5">
-          <p className="text-red-800">{formattedPrice}</p>
-        </div>
-      )} */}
-      </div>
+      )}
     </div>
+  </div>
+
+  {/* TEXT AREA */}
+  <div className="h-[35%] flex flex-col items-center justify-center w-full p-6">
+    <p className="text-primary mt-4">{category}</p>
+    <p className="mt-2 font-semibold text-center">{item.title}</p>
+
+    <div className="flex items-center justify-center gap-10 ">
+        <p className="text-red-800 mt-2">price</p>
+      </div>
+
+    {/* Price (later) */}
+    {/* {formattedPrice && (
+      <div className="flex items-center justify-center gap-10 mt-5">
+        <p className="text-red-800">{formattedPrice}</p>
+      </div>
+    )} */}
+  </div>
+</div>
+
   );
 };
 

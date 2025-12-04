@@ -10,12 +10,19 @@
 const nextConfig = {
   output: "standalone",
     images: {
+    // remotePatterns: [
+    //   {
+    //     protocol: "http",
+    //     hostname: "3.108.63.117",
+    //     port: "9000",
+    //     pathname: "/static/**",
+    //   },
+    // ],
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "3.108.63.117",
-        port: "9000",
-        pathname: "/static/**",
+        protocol: "https",
+        hostname: "medusa-public-images.s3.eu-west-1.amazonaws.com",
+        pathname: "/**",
       },
     ],
   },

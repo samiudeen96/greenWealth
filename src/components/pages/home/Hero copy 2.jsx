@@ -189,7 +189,7 @@ useGSAP(
     <section className="relative" ref={containerRef}>
       <div className="h-full w-full">
         <div
-          className=" section h-[calc(100vh-56px)] w-full flex flex-col sm:flex-row items-center justify-between heroSec1 "
+          className=" section h-[calc(100vh-60px)] w-full flex flex-col sm:flex-row items-center justify-between heroSec1 "
           
         >
           {/* <div className="text1 opacity-0 w-full"> */}
@@ -250,7 +250,7 @@ useGSAP(
         </div>
         {/* </div> */}
 
-        <div className="section h-[calc(100vh-56px)] flex items-start justify-center w-full heroSec2 relative ">
+        <div className="section h-[calc(100vh-60px)] flex items-start justify-center w-full heroSec2 relative ">
           <h3 ref={blurTextRef} className="leading-[75px] text-center">
             {/* DESKTOP (md and up): Two lines */}
             <span className="hidden md:inline-block">
@@ -300,7 +300,7 @@ useGSAP(
           {scrollContent.map((item, index) => (
             <div
               key={index}
-              className="h-[calc(100vh-56px)] flex items-start md:items-center bg-background section z-0"
+              className="h-[calc(100vh-60px)] flex items-start md:items-center bg-background section z-0"
               ref={addToRefs}
             >
               <div className="container">
@@ -318,12 +318,12 @@ useGSAP(
 
         {/* <ScrollSection /> */}
 
-        <div className="sectionEnd h-[calc(100vh-56px)]"></div>
+        <div className="sectionEnd h-[calc(100vh-60px)]"></div>
 
               
       </div>
 
-      <div className="absolute top-0 left-0 h-[calc(100vh-56px)] w-full flex justify-center items-end" >
+      <div className="absolute top-0 left-0 h-[calc(100vh-60px)] w-full flex justify-center items-end" >
         <div className="relative w-full max-w-[1200px] md:max-w-[900px] sm:max-w-[700px] aspect-[1396/686] mx-auto">
           <Image
             ref={handRef}

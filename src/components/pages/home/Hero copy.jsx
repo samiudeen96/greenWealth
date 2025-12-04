@@ -174,7 +174,7 @@ ScrollTrigger.create({
         </div>
         {/* </div> */}
 
-        <div className="section h-[calc(100vh-56px)] flex items-start justify-center w-full heroSec2 relative ">
+        <div className="section h-[calc(100vh-60px)] flex items-start justify-center w-full heroSec2 relative ">
           <h3 ref={blurTextRef} className="leading-[75px] text-center">
             {/* DESKTOP (md and up): Two lines */}
             <span className="hidden md:inline-block">
@@ -223,7 +223,7 @@ ScrollTrigger.create({
           {scrollContent.map((item, index) => (
             <div
               key={index}
-              className="h-[calc(100vh-56px)] flex items-start md:items-center"
+              className="h-[calc(100vh-60px)] flex items-start md:items-center"
               ref={addToRefs}
             >
               <div className="container">

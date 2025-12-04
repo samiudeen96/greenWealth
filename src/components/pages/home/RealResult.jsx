@@ -271,7 +271,7 @@ useGSAP(
 
 
   return (
-    <div ref={imageSecRef} className="container">
+    <div ref={imageSecRef} className="section">
       {/* {/ * TOP SECTION * /}
       <div className=" section pt-5 md:pt-20">
         <h3>
@@ -326,7 +326,8 @@ useGSAP(
       </div> */}
 
       {/* MID SECTIONS */}
-      <div className="section grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 my-56">
+<div className="container">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 my-56">
         <div className="flex flex-col justify-center">
           <h3>Most skincare is doing too much.</h3>
           <p className="mt-8">
@@ -425,6 +426,7 @@ useGSAP(
           </div>
         </div>
       </div>
+</div>
     </div>
   );
 };

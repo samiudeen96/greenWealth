@@ -21,7 +21,7 @@ useGSAP(
       --------------------------------------------- */
       ScrollTrigger.create({
         trigger: reviewRef.current,
-        start: "top-=9% top+=64px",
+        start: "top-=9% top+=60px",
         endTrigger: ".forth-content",
         end: "bottom bottom",
         pin: true,
@@ -78,10 +78,10 @@ useGSAP(
  // Added empty dependency array
 
   return (
-    <div  className='container' ref={containerRef}>
+    <div  className='section' ref={containerRef}>
 
       {/* FIRST SECTION (PINNED) */}
-      <div className='h-[calc(100vh-56px)] flex items-center justify-center first-content relative ' ref={reviewRef}>
+      <div className='h-[calc(100vh-60px)] flex items-center justify-center first-content relative ' ref={reviewRef}>
         <div className='text-center leading-none z-0 doorText absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full'>
           <p className='md:text-[200px] text-[55px] font-semibold left-door font-heading'>What are</p>
           <p className='md:text-[200px] text-[55px] font-semibold right-door font-heading'>they saying</p>
@@ -112,7 +112,7 @@ useGSAP(
       </div>
 
       {/* REVIEWS GRID */}
-      <div className='section min-h-[calc(100vh-56px)] flex items-center justify-center second-content relative z-10'>
+      <div className='container min-h-[calc(100vh-60px)] flex items-center justify-center second-content relative z-10'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 justify-between">
           {review.map((item, index) => (
             <div
@@ -138,11 +138,11 @@ useGSAP(
       </div>
 
       {/* EMPTY THIRD SECTION TO RELEASE PIN */}
-      <div className='min-h-[calc(100dvh-64px)] flex items-center justify-center third-content opacity-0'>
+      <div className='min-h-[calc(100dvh-60px)] flex items-center justify-center third-content opacity-0'>
         
       </div>
       
-      <div className='min-h-[calc(100dvh-64px)] flex items-center justify-center forth-content opacity-0'>
+      <div className='min-h-[calc(100dvh-60px)] flex items-center justify-center forth-content opacity-0'>
       </div>
     </div>
   );

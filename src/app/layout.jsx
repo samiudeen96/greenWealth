@@ -1,4 +1,5 @@
 // import { Geist, Geist_Mono } from "next/font/google";
+import Footer from "@/components/common/Footer";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import { QueryProvider } from "@/components/common/QueryProvider";
@@ -70,15 +71,18 @@ export default function RootLayout({ children }) {
 
         <Header />
 
-        <div id="smooth-wrapper" className="pt-[56px]">
-          <div id="smooth-content">
+        {/* <div id="smooth-wrapper" className="mt-[60px]">
+          <div id="smooth-content"> */}
             <SmoothScrollProvider>
               <QueryProvider>
-                {children}
+                <div className="pt-[60px]">
+                  {children}
+                <Footer />
+                </div>
               </QueryProvider>
             </SmoothScrollProvider>
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
       </body>
     </html>
   );
