@@ -36,7 +36,7 @@ const ProductCards = ({ item }) => {
   return (
 <div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg relative">
   {/* IMAGE AREA */}
-  <div className="p-6 h-[65%] w-full">
+  {/* <div className="p-6 min-h-[65%] w-full">
     <div className="h-full w-full relative">
       {imageUrl && (
           <Image
@@ -52,16 +52,18 @@ const ProductCards = ({ item }) => {
 
       )}
     </div>
-  </div>
+  </div> */}
 
   {/* TEXT AREA */}
-  <div className="h-[35%] flex flex-col items-center justify-center w-full p-6">
+  <div className=" flex flex-col items-center justify-center w-full p-6">
     <p className="text-primary mt-4">{category}</p>
     <p className="mt-2 font-semibold text-center">{item.title}</p>
 
-    <div className="flex items-center justify-center gap-10 ">
+    <p className="mt-5">{item.description}</p>
+
+    {/* <div className="flex items-center justify-center gap-10 ">
         <p className="text-red-800 mt-2">price</p>
-      </div>
+      </div> */}
 
     {/* Price (later) */}
     {/* {formattedPrice && (

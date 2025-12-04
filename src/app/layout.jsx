@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
               <QueryProvider>
                 <div className="pt-[60px]">
                   {children}
-                <Footer />
+                {/* <Footer /> */}
                 </div>
               </QueryProvider>
             </SmoothScrollProvider>

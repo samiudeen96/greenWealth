@@ -326,7 +326,7 @@ useGSAP(
       </div> */}
 
       {/* MID SECTIONS */}
-<div className="container">
+    <div className="container">
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 my-56">
         <div className="flex flex-col justify-center">
           <h3>Most skincare is doing too much.</h3>
@@ -424,9 +424,10 @@ useGSAP(
               ingredients
             </div>
           </div>
+          
         </div>
       </div>
-</div>
+      </div>
     </div>
   );
 };
