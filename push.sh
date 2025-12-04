@@ -1,5 +1,8 @@
-VER=v0.0.1
-REPO=samiudeen96
+VER=v0.0.2
+REPO=mohamedshahidh
 NAME=greenwealth-app
-docker build ./nginx-greenwealth --tag $REPO/$NAME:$VER && docker push  $REPO/$NAME:$VER
-echo $REPO/$NAME:$VER   
+
+docker build . -f nginx-greenwealth/Dockerfile -t $REPO/$NAME:$VER
+docker push $REPO/$NAME:$VER
+
+echo $REPO/$NAME:$VER
