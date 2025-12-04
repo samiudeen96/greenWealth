@@ -36,7 +36,7 @@ const ProductCards = ({ item }) => {
   return (
 <div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg relative">
   {/* IMAGE AREA */}
-  {/* <div className="p-6 min-h-[65%] w-full">
+  <div className="p-6 min-h-[65%] w-full">
     <div className="h-full w-full relative">
       {imageUrl && (
           <Image
@@ -52,7 +52,7 @@ const ProductCards = ({ item }) => {
 
       )}
     </div>
-  </div> */}
+  </div>
 
   {/* TEXT AREA */}
   <div className=" flex flex-col items-center justify-center w-full p-6">
