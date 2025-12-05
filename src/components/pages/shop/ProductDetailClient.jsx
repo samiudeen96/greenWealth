@@ -23,7 +23,7 @@ const ProductDetailClient = ({ product }) => {
 
   return (
     <div className="section">
-      <div className="container py-10 md:py-16">
+      <div className="container">
         {/* Breadcrumb */}
         <div className="mb-6 text-sm text-gray-500">
           <Link href="/" className="hover:underline">
@@ -83,7 +83,7 @@ const ProductDetailClient = ({ product }) => {
           </div>
 
           {/* RIGHT: Info */}
-          <div className="w-full col-span-2">
+          <div className="w-full lg:col-span-2">
             <p className="text-primary text-xs uppercase tracking-[0.18em] mb-2">
               {product.category}
             </p>
