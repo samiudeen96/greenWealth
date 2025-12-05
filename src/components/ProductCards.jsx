@@ -1,79 +1,59 @@
 import Image from "next/image";
 import React from "react";
-
-// Change this to your public Medusa URL (no /store at the end)
-const MEDUSA_BACKEND_URL =
-  process.env.NEXT_PUBLIC_MEDUSA_URL || "http://3.108.63.117:9000";
-
-function getProductImage(item) {
-  // Use thumbnail if set, otherwise first image
-  let url =
-    item.thumbnail ||
-    (item.images && item.images[6] && item.images[6].url) ||
-    null;
-
-  if (!url) return null;
-
-  // Fix local URLs coming from Medusa (http://localhost:9000/...)
-  url = url.replace("http://localhost:9000", MEDUSA_BACKEND_URL);
-
-  return url;
-}
+import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 
 const ProductCards = ({ item }) => {
-  const imageUrl = getProductImage(item);
-
-  // Later you can use item.collection?.title or tags as category
-  const category = "Hair Care";
-
-  // If you add prices in Medusa, you can read them like:
-  // const variant = item.variants && item.variants[0];
-  // const price = variant && variant.prices && variant.prices[0];
-  // const formattedPrice = price
-  //   ? `${(price.amount / 100).toFixed(2)} ${price.currency_code.toUpperCase()}`
-  //   : null;
+  // take 1st image safely
+  const mainImage = item.images?.[0]?.image ?? "/fallback.png"; // change fallback if needed
 
   return (
-<div className="min-h-[450px] bg-white flex flex-col items-center justify-center rounded-lg relative">
-  {/* IMAGE AREA */}
-  <div className="p-6 min-h-[65%] w-full">
-    <div className="h-full w-full relative">
-      {imageUrl && (
+    <div className="bg-white flex flex-col rounded-lg overflow-hidden relative product-card">
+      {/* IMAGE AREA */}
+      <div className="relative w-full px-3 py-4 sm:px-4 sm:py-5 bg-muted rounded-lg">
+        {/* Wishlist icon */}
+        <button
+          type="button"
+          className="absolute top-2 right-2 sm:top-3 sm:right-3 group cursor-pointer z-[1]"
+        >
+          <IoMdHeartEmpty
+            size={22}
+            className="text-gray-700 opacity-100 group-hover:opacity-0 transition-opacity duration-200"
+          />
+          <IoMdHeart
+            size={22}
+            className="text-red-600 absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          />
+        </button>
+
+        {/* Image container with aspect ratio */}
+        <div className="relative w-full aspect-[4/4]">
           <Image
             className="object-contain"
-            src={imageUrl}
+            src={mainImage}
             alt={item.title}
             fill
-            sizes="(max-width: 768px) 100vw,
-                  (max-width: 1024px) 50vw,
-                  (max-width: 1280px) 33vw,
-                  25vw"
+            sizes="(max-width: 768px) 50vw,
+                   (max-width: 1024px) 50vw,
+                   (max-width: 1280px) 33vw,
+                   25vw"
           />
+        </div>
+      </div>
 
-      )}
+      {/* TEXT AREA */}
+      <div className="w-full px-3 py-3 sm:px-4 sm:py-4 gap-1">
+        <p className="mt-1 font-semibold text-sm sm:text-base">
+          {item.title}
+        </p>
+        <p className="text-primary text-xs sm:text-sm">{item.category}</p>
+        <div className="mt-2 flex justify-between items-center">
+          <p className="text-sm sm:text-base">{item.price}</p>
+          <p className="text-sm sm:text-base line-through opacity-60">
+            {item.offerPrice}
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  {/* TEXT AREA */}
-  <div className=" flex flex-col items-center justify-center w-full p-6">
-    <p className="text-primary mt-4">{category}</p>
-    <p className="mt-2 font-semibold text-center">{item.title}</p>
-
-    <p className="mt-5">{item.description}</p>
-
-    <div className="flex items-center justify-center gap-10 ">
-        <p className="text-red-800 mt-2">price</p>
-      </div>
-
-    {/* Price (later) */}
-    {/* {formattedPrice && (
-      <div className="flex items-center justify-center gap-10 mt-5">
-        <p className="text-red-800">{formattedPrice}</p>
-      </div>
-    )} */}
-  </div>
-</div>
-
   );
 };
 

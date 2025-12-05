@@ -124,11 +124,11 @@ const Hero = () => {
             {
               y:
                 device === "mobile"
-                  ? "-8%"
+                  ? 150
                   : device === "tablet"
                   ? "-20%"
                   : "-20%",
-              x: device === "mobile" ? 0 : device === "tablet" ? 150 : 330,
+              x: device === "mobile" ? 0 : device === "tablet" ? 150 : 300,
               scale: 1,
             },
           ],
@@ -138,7 +138,7 @@ const Hero = () => {
             start: "top-=60px top",
             end: "center center",
             scrub: true,
-            markers: true
+            // markers: true
           },
         });
 
@@ -347,15 +347,25 @@ const Hero = () => {
             <div className="flex flex-col items-center justify-center product-pin-section img">
               <div
                 ref={productWrapperRef}
-                className="relative lg:w-[600px] lg:h-[600px] md:w-[250px] md:h-[280px] h-[280px] w-[250px]"
+                className="
+                  relative 
+                  lg:w-[600px] lg:h-[600px]
+                  md:w-[250px] md:h-[280px]
+                  w-[250px] h-[280px]
+                "
               >
                 <Image
                   className="object-contain"
                   src="/bottle1.png"
                   fill
                   alt="Product"
+                  sizes="(max-width: 768px) 250px,
+                        (max-width: 1024px) 280px,
+                        600px"
+                  priority
                 />
               </div>
+
             </div>
           </div>
 

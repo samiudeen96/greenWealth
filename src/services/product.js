@@ -15,13 +15,13 @@
 //   return res.data.products
 // }
 
-import { medusa } from "@/lib/medusa-client"
+// import { medusa } from "@/lib/medusa-client"
   
-export async function getAllProducts() {
-  const { products } = await medusa.store.product.list({
-    limit: 20, // you can tune this
-    // you can also add filters like collection_id, q, etc.
-  })
+// export async function getAllProducts() {
+//   const { products } = await medusa.store.product.list({
+//     limit: 20, // you can tune this
+//     // you can also add filters like collection_id, q, etc.
+//   })
 
-  return products
-}
+//   return products
+// }
