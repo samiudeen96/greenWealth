@@ -268,8 +268,8 @@ export const products = [
     ],
     price: "500 AED",
     offerPrice: "100 AED",
-    category: "kit",
-    kits: true,
+    category: "pack",
+    pack: true,
   },
   {
     title: "Neo Hair Shampoo",

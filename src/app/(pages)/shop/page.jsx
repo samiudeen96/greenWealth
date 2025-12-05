@@ -20,14 +20,14 @@ const Shop = () => {
       newArrivals: false,
       bestSellers: false,
       onSale: false,
-      kits: false,
+      pack: false,
     },
     types: {
       lotion: false,
       oil: false,
       shampoo: false,
       tool: false,
-      kit: false,
+      pack: false,
     },
     prices: {
       under150: false,
@@ -48,7 +48,7 @@ const Shop = () => {
         (col.newArrivals && product.newArrivals) ||
         (col.bestSellers && product.bestSellers) ||
         (col.onSale && product.onSale) ||
-        (col.kits && product.kits);
+        (col.pack && product.pack);
 
       if (!matchesCollections) return false;
 
@@ -60,8 +60,9 @@ const Shop = () => {
         (t.lotion && product.category === "lotion") ||
         (t.oil && product.category === "oil") ||
         (t.shampoo && product.category === "shampoo") ||
-        (t.tool && product.category === "tool") ||
-        (t.kit && product.category === "kit");
+        (t.tool && product.category === "tool") 
+        // ||
+        // (t.pack && product.category === "pack");
 
       if (!matchesType) return false;
 

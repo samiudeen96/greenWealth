@@ -115,12 +115,12 @@ const Filters = ({ filters, onChange }) => {
 
             <div className="flex items-center gap-2">
               <input
-                id="filter-collection-kits"
+                id="filter-collection-pack"
                 type="checkbox"
-                checked={collections.kits}
-                onChange={handleCollectionChange("kits")}
+                checked={collections.pack}
+                onChange={handleCollectionChange("pack")}
               />
-              <label className="text-black/65" htmlFor="filter-collection-kits">Kits</label>
+              <label className="text-black/65" htmlFor="filter-collection-pack">Pack</label>
             </div>
           </div>
         )}
@@ -185,15 +185,15 @@ const Filters = ({ filters, onChange }) => {
               <label className="text-black/65" htmlFor="filter-type-tool">Tool</label>
             </div>
 
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <input
-                id="filter-type-kit"
+                id="filter-type-pack"
                 type="checkbox"
-                checked={types.kit}
-                onChange={handleTypeChange("kit")}
+                checked={types.pack}
+                onChange={handleTypeChange("pack")}
               />
-              <label className="text-black/65" htmlFor="filter-type-kit">Kit</label>
-            </div>
+              <label className="text-black/65" htmlFor="filter-type-pack">Pack</label>
+            </div> */}
           </div>
         )}
       </div>
