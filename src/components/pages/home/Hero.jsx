@@ -109,7 +109,7 @@ const Hero = () => {
         // Scale jumps immediately to match the next .to() target
         // The fix is: stretch animation timing across scroll distance.
 
-        Benefits: gsap.to(productWrapperRef.current, {
+        gsap.to(productWrapperRef.current, {
           keyframes: [
             {
               y:
@@ -127,7 +127,7 @@ const Hero = () => {
                   ? "-8%"
                   : device === "tablet"
                   ? "-20%"
-                  : "-50%",
+                  : "-20%",
               x: device === "mobile" ? 0 : device === "tablet" ? 150 : 330,
               scale: 1,
             },
@@ -135,9 +135,10 @@ const Hero = () => {
           ease: "none",
           scrollTrigger: {
             trigger: ".heroMainWrapper",
-            start: "top top",
-            end: "bottom bottom",
+            start: "top-=60px top",
+            end: "center center",
             scrub: true,
+            markers: true
           },
         });
 
