@@ -61,9 +61,9 @@ const ProductCards = ({ item }) => {
 
     <p className="mt-5">{item.description}</p>
 
-    {/* <div className="flex items-center justify-center gap-10 ">
+    <div className="flex items-center justify-center gap-10 ">
         <p className="text-red-800 mt-2">price</p>
-      </div> */}
+      </div>
 
     {/* Price (later) */}
     {/* {formattedPrice && (
