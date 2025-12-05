@@ -190,26 +190,6 @@ const ProductDetailClient = ({ product }) => {
               </div>
             </div>
 
-            {/* <div className="space-y-5 text-sm md:text-base">
-              <div>
-                <h6 className="font-semibold mb-1.5">Key Benefits</h6>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Helps reduce visible hair fall</li>
-                  <li>Supports healthier, fuller-looking hair</li>
-                  <li>Gently nourishes scalp and strands</li>
-                </ul>
-              </div>
-
-              <div>
-                <h6 className="font-semibold mb-1.5">How to Use</h6>
-                <p className="text-gray-600 leading-relaxed">
-                  Apply to clean scalp or hair as directed. Use consistently,
-                  once or twice daily, and pair with a gentle shampoo and
-                  conditioner for best results.
-                </p>
-              </div>
-            </div> */}
-
           </div>
         </div>
 
