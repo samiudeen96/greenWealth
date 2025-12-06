@@ -60,9 +60,8 @@ const Shop = () => {
         (t.lotion && product.category === "lotion") ||
         (t.oil && product.category === "oil") ||
         (t.shampoo && product.category === "shampoo") ||
-        (t.tool && product.category === "tool") 
-        // ||
-        // (t.pack && product.category === "pack");
+        (t.tool && product.category === "tool");
+      // (t.pack && product.category === "pack");
 
       if (!matchesType) return false;
 
@@ -90,6 +89,8 @@ const Shop = () => {
       const cards = gridRef.current.querySelectorAll(".product-card");
       if (!cards.length) return;
 
+      gsap.killTweensOf(cards);
+
       // reset before animating (important when filters change)
       gsap.set(cards, { opacity: 0, y: 20 });
 
@@ -103,8 +104,7 @@ const Shop = () => {
     },
     {
       scope: gridRef,
-      // rerun animation when number of products changes (filters)
-      dependencies: [filteredProducts.length],
+      dependencies: [filters], // rerun on every filter change
     }
   );
 
@@ -125,12 +125,12 @@ const Shop = () => {
 
             {/* Products grid */}
             <div
-              className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 lg:gap-10 col-span-3"
               ref={gridRef}
+              className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 lg:gap-10 col-span-3"
             >
               {filteredProducts.map((item) => (
                 <Link href={`/shop/${item.slug}`} key={item.slug}>
-                <ProductCards item={item}  />
+                  <ProductCards item={item} />
                 </Link>
               ))}
             </div>

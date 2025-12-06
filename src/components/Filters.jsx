@@ -56,12 +56,12 @@ const Filters = ({ filters, onChange }) => {
   return (
     <div className="md:block hidden">
       {/* Header */}
-      <div className="border-b border-muted py-4">
+      <div className="border-b border-muted py-4 fadeOutUp">
         <p className="text-md font-medium">Filters ({activeCount})</p>
       </div>
 
       {/* Collections */}
-      <div className="border-b border-muted py-3">
+      <div className="border-b border-muted py-3 fadeOutUp">
         <button
           type="button"
           className="flex w-full items-center justify-between cursor-pointer"
@@ -127,7 +127,7 @@ const Filters = ({ filters, onChange }) => {
       </div>
 
       {/* Type */}
-      <div className="border-b border-muted py-3">
+      <div className="border-b border-muted py-3 fadeOutUp">
         <button
           type="button"
           className="flex w-full items-center justify-between cursor-pointer"
@@ -199,7 +199,7 @@ const Filters = ({ filters, onChange }) => {
       </div>
 
       {/* Price */}
-      <div className="border-b border-muted py-3">
+      <div className="border-b border-muted py-3 fadeOutUp">
         <button
           type="button"
           className="flex w-full items-center justify-between cursor-pointer"

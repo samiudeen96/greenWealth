@@ -35,7 +35,7 @@ const StackedCards = () => {
           end: `+=${slide.length * 500}`,
           scrub: true,
           pin: true,
-          markers: true,
+          // markers: true,
         },
       });
 

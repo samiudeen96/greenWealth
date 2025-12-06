@@ -7,7 +7,7 @@ const ProductCards = ({ item }) => {
   const mainImage = item.images?.[0]?.image ?? "/fallback.png"; // change fallback if needed
 
   return (
-    <div className="bg-white flex flex-col rounded-lg overflow-hidden relative product-card">
+    <div className="bg-white flex flex-col rounded-lg overflow-hidden opacity-0 relative product-card fadeOutUp">
       {/* IMAGE AREA */}
       <div className="relative w-full px-3 py-4 sm:px-4 sm:py-5 bg-muted rounded-lg">
         {/* Wishlist icon */}
