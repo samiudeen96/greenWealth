@@ -15,7 +15,7 @@ const Test = () => {
   const productWrapperRef = useRef(null);
   const scrollRefs = useRef([]);
 
-  const device = useDeviceType();
+  const {device} = useDeviceType();
 
   const addToRefs = (el) => {
     if (el && !scrollRefs.current.includes(el)) {
@@ -77,7 +77,7 @@ const Test = () => {
               start: "top top+=60px",   // when heroSec1 hits top of viewport
               end: "bottom top",  // until heroSec1 scrolls out at top
               scrub: true,
-              markers: true,
+              // markers: true,
             },
           }
         );
@@ -315,13 +315,13 @@ const Test = () => {
                     <div>
                       <h5 className="mb-1">{item.title}</h5>
                       <p className="text-lg mb-2">{item?.info}</p>
-                      <p>{item.content}</p>
                     </div>
                   </div>
+                  <p className="mt-5">{item.content}</p>
                 </div>
 
-                <div className="flex-1"></div>
-                <div className="flex-1"></div>
+                <div className="flex-1 md:block hidden"></div>
+                <div className="flex-1 md:block hidden"></div>
               </div>
             </div>
           ))}

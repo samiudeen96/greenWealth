@@ -53,6 +53,6 @@ export const useDeviceType = () => {
     ? "desktop"
     : "large-desktop";
 
-  // return { isMobile, isTablet, isDesktop, isLargeDesktop, device };
-  return device;
+  return { isMobile, isTablet, isDesktop, isLargeDesktop, device };
+  // return device;
 };

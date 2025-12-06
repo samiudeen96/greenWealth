@@ -15,7 +15,7 @@ const StackedCards = () => {
   const containerRef = useRef(null);
   const stackedSectionRef = useRef(null);
   const cardsRef = useRef([]);
-  const device = useDeviceType();
+  const {device, isMobile} = useDeviceType();
 
   // Track mounted state to prevent hydration mismatch
   const [mounted, setMounted] = useState(false);
@@ -31,11 +31,11 @@ const StackedCards = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: stackedSectionRef.current,
-          start: "top top+=60px",
+          start: isMobile ? "top+=180 top+=60px" : "top top+=60px",
           end: `+=${slide.length * 500}`,
           scrub: true,
           pin: true,
-          // markers: true,
+          markers: true,
         },
       });
 
