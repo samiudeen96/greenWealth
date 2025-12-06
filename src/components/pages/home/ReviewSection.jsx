@@ -27,7 +27,7 @@ const ReviewSection = () => {
           pin: true,
           pinSpacing: false,
           scrub: 0.5,
-          markers: true
+          // markers: true
         });
 
         /* ---------------------------------------------

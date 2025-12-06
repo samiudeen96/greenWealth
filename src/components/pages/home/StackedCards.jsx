@@ -114,7 +114,7 @@ const StackedCards = () => {
                   transform: `translateX(${offset}px) scale(${scale})`,
                 }}
               >
-                <div className="relative h-[65%]  flex items-center justify-center p-4">
+                <div className="relative h-[60%] md:h-[65%]  flex items-center justify-center p-4">
                   <div className="relative w-[300px] h-[100%]">
                     <Image
                       className="object-contain"
@@ -127,13 +127,13 @@ const StackedCards = () => {
                   </div>
                 </div>
 
-                <div className="h-[35%] bg-primary p-4">
+                <div className="h-[40%] md:h-[35%] bg-primary p-4">
                   <div className="flex flex-col items-center justify-center">
                     <div className="pill">Step 0{i + 1}</div>
                     <h6 className="font-semibold text-white mt-6">
                       {item.label}
                     </h6>
-                    <p className="text-white mt-2 text-center">
+                    <p className="text-white mt-2 text-center text-xs md:text-base">
                       {item.content}
                     </p>
                   </div>
