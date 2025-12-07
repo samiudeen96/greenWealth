@@ -23,7 +23,7 @@ const Slider = ({ images }) => {
       </button> */}
 
       {/* Slider */}
-      <div className="col-span-10 p-5">
+      <div className="col-span-10 p-5 fadeOutUp">
         <Splide
           ref={splideRef}
           options={{
@@ -43,7 +43,9 @@ const Slider = ({ images }) => {
                   alt={`product-${index}`}
                   fill
                   className="object-contain"
-                  sizes="300px"
+                  sizes="(max-width: 768px) 100vw,
+                         (max-width: 1024px) 50vw,
+                         520px"
                   priority
                 />
               </div>

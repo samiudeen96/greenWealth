@@ -122,7 +122,7 @@ const Shop = () => {
           <div className="py-10 grid md:grid-cols-4 gap-8">
             {/* Filters sidebar column */}
             <div className="col-span-4 md:col-span-1">
-              <div className="sticky top-[60px]">
+              <div className="">
                 <Filters filters={filters} onChange={setFilters} />
               </div>
             </div>
