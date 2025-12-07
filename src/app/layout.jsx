@@ -6,30 +6,7 @@ import { QueryProvider } from "@/components/common/QueryProvider";
 import SmoothScrollProvider from "@/components/common/SmoothScrollProvider";
 // import { Playfair_Display, Inter } from "next/font/google";
 import localFont from "next/font/local";
-
-// const playfair = Playfair_Display({
-//   subsets: ["latin"],
-//   weight: ["500", "600", "700"],
-//   variable: "--font-heading",
-// });
-
-// const inter = Inter({
-//   subsets: ["latin"],
-//   weight: ["300", "400", "500", "600"],
-//   variable: "--font-body",
-// });
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-
+import GsapAnimationProvider from "@/components/common/GsapAnimationProvider";
 
 // Geist Font Placeholder Setup
 const geist = localFont({
@@ -66,23 +43,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <body className={`${playfair.variable} ${inter.variable} relative`}> */}
       <body className={`${geist.variable} relative`}>
-
         <Header />
-
-        {/* <div id="smooth-wrapper" className="mt-[60px]">
-          <div id="smooth-content"> */}
-            <SmoothScrollProvider>
-              <QueryProvider>
-                <div className="pt-[60px]">
-                  {children}
-                <Footer />
-                </div>
-              </QueryProvider>
-            </SmoothScrollProvider>
-          {/* </div>
-        </div> */}
+        <SmoothScrollProvider>
+          <QueryProvider>
+            <div className="pt-[60px]">
+              <GsapAnimationProvider>
+                {children}
+              </GsapAnimationProvider>
+              <Footer />
+            </div>
+          </QueryProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );
