@@ -6,6 +6,9 @@ import ProductCards from "@/components/ProductCards";
 import { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Slider from "@/components/Slider";
+import Tab from "@/components/common/Tab";
+import Tabs from "@/components/common/Tab";
+import ThumbnailSlider from "@/components/ThumbnailSlider";
 
 const ProductDetailClient = ({ product }) => {
   const [qty, setQty] = useState(1);
@@ -21,13 +24,34 @@ const ProductDetailClient = ({ product }) => {
   const increment = () => setQty((q) => q + 1);
   const decrement = () => setQty((q) => (q > 1 ? q - 1 : 1));
 
+
+  const tabData = [
+    {
+      label: "Description",
+      content: <p>This is the description of the product.</p>,
+    },
+    {
+      label: "Ingredients",
+      content: <ul className="list-disc pl-5"><li>Green Tea</li><li>White Ginseng</li></ul>,
+    },
+    {
+      label: "How to Use",
+      content: <p>Apply to scalp twice daily for best results.</p>,
+    },
+  ];
+
+
   return (
     <>
-      <div className="hfull flex items-center py-10 ">
+      <div className="hfull flex items-center justify-center py-10 ">
         <div className="section">
           <div className="container ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20 items-center">
               {/* RIGHT: Info */}
+              {/* <div className="">
+                <ThumbnailSlider images={images} />
+              </div> */}
+
               <div className="">
                 <p className="text-xs uppercase tracking-[0.18em] mb-2 fadeOutUp">
                   {product.category}
@@ -95,6 +119,7 @@ const ProductDetailClient = ({ product }) => {
               <div className="">
                 <Slider images={images} />
               </div>
+
             </div>
           </div>
         </div>
@@ -102,6 +127,10 @@ const ProductDetailClient = ({ product }) => {
 
       <div className="section">
         <div className="container">
+
+          <div className="container hfull mt-10">
+            <Tabs tabs={tabData} />
+          </div>
 
           {/* Related products */}
           {/* <div className="mt-16 md:mt-20 border-t border-muted pt-8 md:pt-10"> */}

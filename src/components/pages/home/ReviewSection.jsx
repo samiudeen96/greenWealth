@@ -78,7 +78,7 @@ const ReviewSection = () => {
   // Added empty dependency array
 
   return (
-    <div className='' ref={containerRef}>
+    <div className='bg-background' ref={containerRef}>
 
       {/* FIRST SECTION (PINNED) */}
       <div className='h-[calc(100vh-60px)] flex items-center justify-center first-content relative section' ref={reviewRef}>
